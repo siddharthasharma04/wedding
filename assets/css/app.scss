@@ -1,0 +1,260 @@
+@import 'bootstrap';
+//font-family: 'Great Vibes', cursive;
+// font-family: 'Poiret One', cursive;
+// font-family: 'Marck Script', cursive;
+
+$bride-color:#bb0056;
+$groom-color:#00226d;
+
+img{
+    max-width: 100%;
+}
+
+body{
+    font-family: 'Poiret One', cursive;
+}
+section{
+    min-height: 100vh;
+    padding-bottom: 4rem;
+    .section-wrapper {
+        position: relative;
+    }
+}
+
+::selection{
+    background-color: yellowgreen;
+}
+
+.f-2{
+    font-family: 'Great Vibes', cursive;
+}
+.f-3{
+    font-family: 'Marck Script', cursive;
+}
+
+svg{
+    fill:currentColor;
+}
+section.home-section {
+    overflow: hidden;
+    color: white;
+    background-image: url('../images/countup_bg.png');
+    .section-wrapper {
+        .content-container{
+            position: relative;
+            padding: 5px;
+            z-index: 5;
+            height: 100vh;
+            background-image: url(../images/line-bg.svg);
+            background-color: rgba($color: #000000, $alpha: 0.3);
+            h1{
+                font-size: 7vw;
+                margin-top: 1em;
+                margin-top: 3em;
+                line-height: 1.5;
+                text-shadow: 2px 3px 2px #171717;
+                @media screen and (max-width:800px) {
+                    font-size: 2.6em;
+                    margin-top: 8em;
+                }
+            }
+            .go-down{
+                display: inline-block;
+                color: #fff;
+                margin-top:3em;
+                opacity: 0.7;
+                
+                &:hover{
+                    opacity: 1;
+                }
+                svg{
+                    width:40px;
+                    animation-iteration-count: infinite;
+                animation-duration: 2000ms;
+                    
+                }
+            }
+        }
+        .slider-container{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+            .image-container{ 
+                img {
+                height: 100vh;
+                object-fit: cover;
+            }
+          }
+        }
+    }
+   
+}
+
+.heading-wrapper{
+    padding: 4.7em 2em;
+    font-family: 'Marck Script', cursive;
+    background-image: url(../images/head-top.png), url(../images/head-bottom.png);
+    background-size: 632px 74px;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-position-y: 0%,90%;
+    min-height: 14em;
+    h2{
+        font-size: 3em;
+       
+    }
+}
+section.about-section{
+    background-image: url('../images/countup_bg.png');
+    
+    .card{
+        background-image: url(../images/card-bg.png);
+        background-size: cover;
+        background-position: center;
+        background-color: #ffecec;
+        position: relative;
+        > div{
+            position: relative;
+            z-index: 2;
+        }
+    }
+    
+    .card.p-4:after {content: "";position: absolute;top: 0;left: 0;right: 0;bottom: 0;background: rgba(0, 0, 0, 0.52);z-index: 0;}
+    
+    .icon-container img {
+        box-shadow: 0px 0px 5px #666;
+    }
+}
+section.imp-dates{
+    background-image: url('../images/countup_bg.png');
+    overflow: hidden;
+    padding-top: 2em;
+    .dates-container {
+        display: inline-block;
+        padding: 0 20px 40px;
+        position: relative;
+        box-shadow: 2px 2px 2px #ccc;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        width: 100%;
+        max-width: 500px;
+    }
+    
+    img.bride {left: -50px;}
+    
+    .dates-container img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        z-index: 0;
+    }
+    
+    img.groom {
+        right: -38px;
+    }
+    
+    .date.mb-5 {
+        position: relative;
+        z-index: 5;
+    }
+}
+
+.quotes-container{
+    min-height: 300px;
+    background-image: url(../images/bg.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .owl-stage,.owl-item{
+        display: flex;
+    }
+    .quote-inner{
+        background-color: rgba(0, 0, 0, 0.8);
+        h3 {
+            font-size: 2.5rem;
+            position: relative;
+        }
+        h3:after,h3:before {
+            font-size: 1.5em;
+            line-height: 1;
+            color: #ccc;
+            // position: absolute;
+            
+        }
+        
+        h3:before {
+            content: open-quote;
+            left: 0;
+        }
+        
+        h3:after {
+            content: close-quote;
+            right: 0;
+        }
+        
+        
+    }
+}
+
+section.map-section{
+    display: flex;
+    .section-wrapper{
+        width: 100%;
+        .location-cotainer{
+            position: relative;
+            z-index: 5;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+    }
+    .location{
+    display: inline-block;
+    background-image: url(https://static01.nyt.com/newsgraphics/2018/02/14/royal-wedding/assets/rose-vine-comp.gif);
+    background-size: 100%;
+    background-color: rgba(4, 4, 4, 0.8);
+    color: #fff;
+    padding: 3em 4em;
+    border-radius: 5px;
+    .btn{
+        font-size: 1.6rem;
+    }
+    }
+    img{
+        display: block;
+        margin: auto;
+    }
+
+    .map-container iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        border: 0;
+        z-index: 0;
+    }
+}
+
+footer{
+    .btn{
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        line-height: 1;
+        height: 35px;
+        width: 35px;
+        padding: 0;
+        border-radius: 2px;
+        background-color: rgba($color: #000000, $alpha: 0.8);
+        border: none;
+        z-index: 10;
+        display: none;
+        svg{
+            width:20px;
+        }
+    }
+}
